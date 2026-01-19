@@ -9,8 +9,6 @@ function Certificates() {
       title: 'Python for Machine Learning an Data Science',
       issuer: 'Udemy',
       date: '21/12/2025',
-      description: 'Comprehensive course covering modern web development practices and frameworks.',
-      // Note: Ensure this file exists exactly as named in your /public folder
       link: '/ml&ds.jpg', 
     },
     {
