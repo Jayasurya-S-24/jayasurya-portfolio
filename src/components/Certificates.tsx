@@ -6,11 +6,12 @@ function Certificates() {
 
   const certificates = [
     {
-      title: 'Advanced Web Development',
-      issuer: 'Tech Academy',
-      date: '12/10/2024',
+      title: 'Python for Machine Learning an Data Science',
+      issuer: 'Udemy',
+      date: '21/12/2025',
       description: 'Comprehensive course covering modern web development practices and frameworks.',
-      link: '#',
+      // Note: Ensure this file exists exactly as named in your /public folder
+      link: '/ml&ds.jpg', 
     },
     {
       title: 'React Professional Certification',
@@ -88,6 +89,7 @@ function Certificates() {
           <p className="text-slate-400 text-lg">Professional certifications and accomplishments</p>
         </div>
 
+        {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           <button
             onClick={() => setActiveTab('certifications')}
@@ -124,22 +126,25 @@ function Certificates() {
           </button>
         </div>
 
+        {/* Certifications Content */}
         {activeTab === 'certifications' && (
-          <div className="grid md:grid-cols-2 gap-6 animate-fadeIn">
+          <div className="grid md:grid-cols-2 gap-6">
             {certificates.map((cert, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-105 group"
+                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-[1.02] group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Award className="text-white" size={24} />
                   </div>
-                  <a
-                    href={cert.link}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                    target="_blank"
+                  {/* FIXED: Using anchor tag for external links to photos */}
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
                     rel="noopener noreferrer"
+                    className="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"
+                    title="View Certificate"
                   >
                     <ExternalLink size={20} />
                   </a>
@@ -159,12 +164,13 @@ function Certificates() {
           </div>
         )}
 
+        {/* Hackathons Content */}
         {activeTab === 'hackathons' && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {hackathons.map((hackathon, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-105 group"
+                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-[1.02] group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -185,12 +191,13 @@ function Certificates() {
           </div>
         )}
 
+        {/* Presentations Content */}
         {activeTab === 'presentations' && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {presentations.map((presentation, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-105 group"
+                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all hover:scale-[1.02] group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
