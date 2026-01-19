@@ -21,7 +21,7 @@ function Hero() {
               <span className="text-cyan-400 text-2xl font-semibold">Hello, I'm</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white">
-              Jayasurya S
+              Jayasurya Senthil
               <br />
               <span className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mt-3">
                 ML Engineer
